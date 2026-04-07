@@ -1,16 +1,16 @@
 name: 'CI Pipeline Test'
 on: [push, pull_request]
 jobs:
-  test:
-  runs-on:ubuntu-latest
-  steps:
-  -name: "Checkout Code"
-  uses: actions/checkout@v5
-  -name: "Setup Node"
-  uses: actions/setup-node@v6
-  with:
-    node-version: '24.13.1'
-  -name: "Install Package"
-  run npm install
-  -name: "Run Test"
-  run: npm test
+ test:
+    runs-on:ubuntu-latest
+    steps:
+     -name: "Checkout Code"
+      uses: actions/checkout@v5
+     -name: "Setup Node"
+      uses: actions/setup-node@v6
+      with:
+        node-version: '24.13.1'
+     -name: "Install Package"
+      run npm install
+     -name: "Run Test"
+      run: npm test
